@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Блогеры Инстаграма v2.4</title>
+  <link rel="shortcut icon" href="img/icons/favicon.ico" />
+  <link rel="stylesheet" href="/css/vendor.min.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap&subset=cyrillic" rel="stylesheet">
+<body>
+
+
+
+<header class="header">
+  <div class="container flex">
+    <div class="header__logo flex">
+      <a href="#" class="header__logo__img">
+        <img src="/img/icons/logo.png" alt="">
+      </a>
+      <div class="header__logo__right">
+        <a href="#" class="header__logo__name">
+          Блогеры Инстаграма v2.4
+        </a>
+        <a href="#" class="header__logo__inst">
+          @easyprbot
+        </a>
+      </div>
+    </div>
+    <div class="header__nav__container">
+      <div class="nav__mob__title flex">
+        Меню
+        <a href="#" class="vav__close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1L13 13M13 1L1 13" stroke="#B4BDC1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <ul class="header__nav__ul flex">
+        <li>
+          <a href="#">
+            Все блогеры
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Гивы
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Мои промокоды
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Предложить блогера
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Mой заказ
+            <span>0</span>
+          </a>
+        </li>
+      </ul>
+      <div class="nav__overlay"></div>
+    </div>
+    <a href="#" class="hamburger__button">
+      <span></span><span></span><span></span>
+    </a>
+  </div>
+</header>
+
+
+<div class="wrapper">
+
+
+
+</div>
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__links flex">
+      <a href="#">Написать в техподдержку</a>
+      <a href="#">Пользовательское соглашение</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #424858;
+  }
+  .footer__links {
+    justify-content: center;
+  }
+  .footer__links a {
+    color: #fff;
+    font-size: 16px;
+    line-height: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  @media screen and (max-width: 550px) {
+    .footer {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    .footer__links a {
+      width: 100%;
+      line-height: 26px;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+</style>
+
+
+
+
+<div id="enter" style="display: block;" class="popup__container popup__enter">
+    <div class="popup__inner">
+        <div class="popups__overlay"></div>
+        <div class="popup__warning flex">
+            <svg width="47" height="46" viewBox="0 0 47 46" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="46.92" height="46" fill="url(#pattern0)"/><defs><pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0" transform="scale(0.0196078 0.02)"/></pattern><image id="image0" width="51" height="50" xlink:href="data:image/png;base64,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"/></defs></svg>
+            <div class="popup__warning__text">
+                Зарегистрируйтесь или войдите в аккаунт, <b>чтобы отправить отзыв на модерацию</b> и получить доступ к истории ваших отзывов
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="popup">
+            <a href="#" class="popup__close_reg">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.5" d="M1 1L11 11M11 1L1 11" stroke="#6A7B83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <form style="display: block;" class="enter__container">
+                <div class="popup_handles flex">
+                    <a href="#enter" class="popup__handle openPopup active">
+                        Вход
+                    </a>
+                    <a href="#reg" class="popup__handle openPopup">
+                        Регистрация
+                    </a>
+                </div>
+                <div class="popup__content enter__content">
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Введите номер телефона
+                        </div>
+                        <input type="tel" name="login" placeholder="В формате, +7 (999) 999-99-99" class="popup__input">
+                        <div class="error__text">
+                            Номер телефона не может содержать пробелов и букв
+                        </div>
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Пароль
+                        </div>
+                        <a href="#" class="gorget__pass">Забыли пароль?</a>
+                        <input type="password" name="password" class="popup__input">
+                        <div class="error__text">
+                            От 6 символов. Минимум по 1 букве верхнего и нижнего регистра
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__bottom flex">
+                    <button class="popup__submit">
+                        Войти
+                    </button>
+                </div>
+            </form>
+
+            <div class="forget__container">
+                <form class="forget__step firstStep">
+                    <div class="forget__content">
+                        <div class="popup__title">
+                            Восстановление пароля
+                        </div>
+                        <div class="popup__step">
+                            Шаг 1 из 3
+                        </div>
+                        <div class="label__popup errorInput flex">
+                            <div class="input__title">
+                                Введите ваш номер телефона. <br>Мы отправим на него код
+                            </div>
+                            <input type="tel" name="phone" placeholder="В формате, +7 (999) 999-99-99" class="popup__input">
+                            <div class="error__text startError">
+                                Номер телефона не может содержать пробелов и букв
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup__bottom flex">
+                        <a href="#" class="back__popup">
+                            Назад
+                        </a>
+                        <button class="popup__submit forgetSubmit">
+                            Далее
+                        </button>
+                    </div>
+                </form>
+
+                <form style="display: none;" class="forget__step">
+                    <div class="forget__content">
+                        <div class="popup__title">
+                            Восстановление пароля
+                        </div>
+                        <div class="popup__step">
+                            Шаг 2 из 3
+                        </div>
+                        <div class="text__bigger">Код из SMS</div>
+                        <div class="label__popup flex">
+                            <div class="input__title input__title-smoller">
+                                Мы отправили вам код подтверждения на номер <span class="telSpan"><span class="startTel">+7 (999)</span> xxx-xx-<span class="endTel">99</span></span>
+                            </div>
+                            <input type="text" name="code" placeholder="Код" class="popup__input">
+                            <div class="error__text">
+                                Код неверный
+                            </div>
+                        </div>
+                        <a href="#" class="sendRepeat">
+                            Отправить код повторно
+                        </a>
+                        <div class="forget__tray">
+                            Попытка №<span class="trayNum">0</span>
+                            <br>Запросить код повторно можно через <span class="countdown">60</span> секунд<br>
+                            <div class="notSms">
+                                <span>Не приходит SMS</span>
+                                <div class="notSmsTooltip">
+                                    <p>Возможные причины:</p>
+                                    <p>1. Вы не изменили номер мобильного телефона на сайте на новый и SMS было отправлено на старый номер.</p>
+                                    <p>2. Проблемы могут быть со стороны сотового оператора. Обратитесь в их службу поддержки.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup__bottom flex">
+                        <a href="#" class="back__popup">
+                            Назад
+                        </a>
+                        <button class="popup__submit forgetSubmit">
+                            Далее
+                        </button>
+                    </div>
+                </form>
+
+                <form style="display: none;" class="forget__step lastStep">
+                    <div class="forget__content">
+                        <div class="popup__title">
+                            Восстановление пароля
+                        </div>
+                        <div class="popup__step">
+                            Шаг 3 из 3
+                        </div>
+                        <div class="label__popup">
+                            <div class="input__title flex">
+                                Введите новый пароль
+                            </div>
+                            <input type="password" name="password" class="popup__input">
+                            <div class="error__text startError">
+                                От 6 символов. Минимум по 1 букве верхнего и нижнего регистра
+                            </div>
+                        </div>
+                        <div class="label__popup">
+                            <div class="input__title flex">
+                                Подтвердите пароль
+                            </div>
+                            <input type="password" name="passwordRep" class="popup__input">
+                            <div class="error__text">
+                                Пароли не совпадают
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup__bottom flex">
+                        <a href="#" class="back__popup">
+                            Назад
+                        </a>
+                        <button class="popup__submit forgetSubmit">
+                            Далее
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div id="reg" class="popup__container popup__reg">
+    <div class="popup__inner">
+        <div class="popups__overlay"></div>
+        <div class="popup">
+            <a href="#" class="popup__close_reg">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.5" d="M1 1L11 11M11 1L1 11" stroke="#6A7B83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <form class="reg__container">
+                <div class="popup_handles flex">
+                    <a href="#enter" class="popup__handle openPopup">
+                        Вход
+                    </a>
+                    <a href="#reg" class="popup__handle openPopup active">
+                        Регистрация
+                    </a>
+                </div>
+                <div class="popup__content reg__content">
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Введите ваш номер телефона. <br>Мы отправим на него код
+                        </div>
+                        <input type="tel" name="login" placeholder="В формате, +7 (999) 999-99-99" class="popup__input">
+                        <div class="error__text startError">
+                            Номер телефона не может содержать пробелов <br>и букв
+                        </div>
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Пароль
+                        </div>
+                        <input type="password" name="password" class="popup__input">
+                        <div class="error__text startError">
+                            От 6 символов. Минимум по 1 букве верхнего <br>и нижнего регистра
+                        </div>
+                    </div>
+                    <div class="label__popup flex">
+                        <div class="input__title">
+                            Подтвердите пароль
+                        </div>
+                        <input type="password" name="passwordRep" class="popup__input">
+                        <div class="error__text">
+                            Пароли не совпадают
+                        </div>
+                    </div>
+                    <div class="label__popup errorInput agreeLabel flex">
+                        <input type="checkbox" name="agreeReg" value="огласие на регистрацию" class="agreeInput">
+                        <div class="inputFalse">&#x2714;</div>
+                        <div class="agree__text">
+                            Я соглашаюсь с <a href="#" target="_blank">Политикой конфиденциальности</a> и <a href="#" target="_blank">Правилами пользования сайтом</a>
+                        </div>
+                        <div class="error__text">
+                            Выберите чекбокс, чтобы продолжить
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__bottom flex">
+                    <button class="popup__submit reg__submit">
+                        Далее
+                    </button>
+                </div>
+            </form>
+
+            <form style="display: none;" class="reg__container lastStep">
+                <div class="popup_handles flex">
+                    <a href="#enter" class="popup__handle openPopup">
+                        Вход
+                    </a>
+                    <a href="#reg" class="popup__handle openPopup active">
+                        Регистрация
+                    </a>
+                </div>
+                <div class="popup__content reg__content">
+                    <div class="text__bigger">Код из SMS</div>
+                    <div class="label__popup flex">
+                        <div class="input__title input__title-smoller">
+                            Мы отправили вам код подтверждения на номер <span class="telSpan"><span class="startTel">+7 (999)</span> xxx-xx-<span class="endTel">99</span></span>
+                        </div>
+                        <input type="text" name="code" placeholder="Код" class="popup__input">
+                        <div class="error__text">
+                            Код неверный
+                        </div>
+                    </div>
+                    <a href="#" class="sendRepeat">
+                        Отправить код повторно
+                    </a>
+                    <div class="forget__tray">
+                        Попытка №<span class="trayNum">0</span>
+                        <br>Запросить код повторно можно через <span class="countdown">60</span> секунд<br>
+                        <div class="notSms">
+                            <span>Не приходит SMS</span>
+                            <div class="notSmsTooltip">
+                                <p>Возможные причины:</p>
+                                <p>1. Вы не изменили номер мобильного телефона на сайте на новый и SMS было отправлено на старый номер.</p>
+                                <p>2. Проблемы могут быть со стороны сотового оператора. Обратитесь в их службу поддержки.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__bottom flex">
+                    <a href="#" class="back__popup">
+                        Назад
+                    </a>
+                    <button class="popup__submit reg__submit popup__submit-reg">
+                        Зарегистрироваться
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="js/vendor.min.js"></script>
+<script src="js/custom.min.js"></script>
+
+    <script>
+        $(".reg__container").submit(function() {
+            var th = $(this);
+            $.ajax({
+                type: "POST",
+                url: "/mail.php",
+                data: th.serialize()
+            }).done(function() {
+                setTimeout(function(){
+
+                }, 100);
+            });
+            return false;
+        });
+
+
+        $('.forgetSubmit').click(function (e) {
+            e.preventDefault();
+
+            var
+                $this = $(this),
+                thisContainer = $this.closest('.forget__step');
+
+            if(!thisContainer.hasClass('lastStep')) {
+                $('.forget__step').hide();
+                thisContainer.next().show();
+            }
+        })
+
+
+    </script>
+
+    <script>
+        var scrollWidth = window.innerWidth - document.documentElement.clientWidth;
+
+        $('body, html').css({'overflow' : 'hidden'});
+        $('html').css({'padding-right' : scrollWidth+'px'});
+        $('.header').css({'right' : scrollWidth+'px'});
+    </script>
+
+    <script>
+        $(".forget__step").submit(function() {
+            var th = $(this);
+            $.ajax({
+                type: "POST",
+                url: "/mail.php",
+                data: th.serialize()
+            }).done(function() {
+                setTimeout(function(){
+
+                }, 100);
+            });
+            return false;
+        });
+
+
+        $('.reg__submit').click(function (e) {
+            e.preventDefault();
+
+            var
+                $this = $(this),
+                thisContainer = $this.closest('.reg__container');
+
+            if(!thisContainer.hasClass('lastStep')) {
+                $('.reg__container').hide();
+                thisContainer.next().show();
+            }
+        })
+    </script>
+
+
+
+    <!--При ошибке к добавлять .label__popup класс .errorInput-->
+
+
+</body>
+</html>
