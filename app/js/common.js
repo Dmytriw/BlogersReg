@@ -8,7 +8,7 @@ $(function () {
         return false;
     });
 
-    $("input[type='tel']").mask("+7 (999) 999-99-99");
+    $("input[type='tel']").mask("+79999999999");
 
     $('input').focus(function () {
        $(this).closest('.label__popup').removeClass('errorInput');
@@ -36,7 +36,6 @@ $(function () {
         $('body, html').css({'overflow' : 'hidden'});
         $('html').css({'padding-right' : scrollWidth+'px'});
         $('.header').css({'right' : scrollWidth+'px'});
-        }
     });
 
 
@@ -100,8 +99,6 @@ $(function () {
 
     });
 
-
-
     //////////////////
     $('.inputFalse').click(function (e) {
         e.preventDefault();
@@ -142,6 +139,31 @@ $(function () {
     $('body').click(function (evt) {
         if(!$(evt.target).is('.notSms, .notSms span')) {
             $('.showedTool').removeClass('showedTool');
+        }
+    });
+
+
+
+    $('.head_open_sekect').click(function () {
+        var
+            $this = $(this),
+            thisSelect = $this.next();
+
+        if(!$this.hasClass('openedSel')) {
+            $('.head__select__container').hide();
+            $('.head_open_sekect').removeClass('openedSel');
+            $this.addClass('openedSel');
+            thisSelect.show();
+        } else {
+            $this.removeClass('openedSel');
+            thisSelect.hide();
+        }
+    });
+
+    $('body').click(function (evt) {
+        if(!$(evt.target).is('.head_open_sekect')) {
+            $('.head_open_sekect').removeClass('openedSel');
+            $('.head__select__container').hide();
         }
     });
 
@@ -196,6 +218,7 @@ function countdown(start, count, button) {
         if (counter === 0) {
             clearInterval(counter);
             button.removeClass('blockButton');
+            button.css({'display' : 'block'});
         }
 
     }, 1000);

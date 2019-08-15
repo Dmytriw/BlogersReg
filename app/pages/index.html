@@ -15,65 +15,92 @@
 
 <header class="header">
   <div class="container flex">
-    <div class="header__logo flex">
-      <a href="#" class="header__logo__img">
-        <img src="/img/icons/logo.png" alt="">
-      </a>
-      <div class="header__logo__right">
-        <a href="#" class="header__logo__name">
-          Блогеры Инстаграма v2.4
-        </a>
-        <a href="#" class="header__logo__inst">
-          @easyprbot
-        </a>
+      <div class="header__part flex">
+          <div class="header__logo flex">
+              <a href="#" class="header__logo__img">
+                  <img src="/img/icons/logo.png" alt="">
+              </a>
+              <div class="header__logo__right">
+                  <a href="#" class="header__logo__name">
+                      Блогеры Инстаграма v2.4
+                  </a>
+                  <a href="#" class="header__logo__inst">
+                      @easyprbot
+                  </a>
+              </div>
+          </div>
+          <div class="header__nav__container">
+              <div class="nav__mob__title flex">
+                  Меню
+                  <a href="#" class="vav__close">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1L13 13M13 1L1 13" stroke="#B4BDC1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+              </div>
+              <ul class="header__nav__ul flex">
+                  <li>
+                      <a href="#">
+                          Все блогеры
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                          Гивы
+                      </a>
+                  </li>
+                  <li>
+                      <div class="head_nav_select head_open_sekect" href="#">
+                          Отзывы
+                          <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.39959L4 4.51307L7 1.39959" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </div>
+                      <div class="head__select__container">
+                          <a href="#">Все отзывы</a>
+                          <a href="#">Оставить отзыв</a>
+                          <a href="#">История моих отзывов</a>
+                      </div>
+                  </li>
+              </ul>
+              <div class="nav__overlay"></div>
+          </div>
       </div>
-    </div>
-    <div class="header__nav__container">
-      <div class="nav__mob__title flex">
-        Меню
-        <a href="#" class="vav__close">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1L13 13M13 1L1 13" stroke="#B4BDC1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+      <div class="header__part flex">
+          <div class="header__enter__container">
+              <a href="#enter" class="enter__head_but openPopup">Вход/регистрация</a>
+              <div class="logined__link">
+                  <div class="head_open_sekect"></div>
+                  <div class="head__select__container">
+                      <a href="#">Все отзывы</a>
+                      <a href="#">Оставить отзыв</a>
+                      <a href="#">История моих отзывов</a>
+                  </div>
+              </div>
+          </div>
+          <a href="#" class="hamburger__button">
+              <span></span><span></span><span></span>
+          </a>
       </div>
-      <ul class="header__nav__ul flex">
-        <li>
-          <a href="#">
-            Все блогеры
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Гивы
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Мои промокоды
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Предложить блогера
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Mой заказ
-            <span>0</span>
-          </a>
-        </li>
-      </ul>
-      <div class="nav__overlay"></div>
-    </div>
-    <a href="#" class="hamburger__button">
-      <span></span><span></span><span></span>
-    </a>
   </div>
 </header>
 
 
 <div class="wrapper">
-
+    <div id="end" class="window__container popup__end">
+        <div class="popup__inner">
+            <div class="popup">
+                <div class="end__container flex">
+                    <img src="/img/icons/done_icon.png" alt="">
+                    <div class="done__text">
+                        Отзыв отправлен на<br>модерацию
+                    </div>
+                    <a href="#" class="done_button">
+                        Оставить еще один отзыв
+                    </a>
+                    <a href="#" class="done_button">
+                        Посмотреть историю отзывов
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </div>
@@ -151,7 +178,7 @@
                         <div class="input__title">
                             Введите номер телефона
                         </div>
-                        <input type="tel" name="login" placeholder="В формате, +7 (999) 999-99-99" class="popup__input">
+                        <input type="tel" name="login" placeholder="В формате, +79999999999" class="popup__input">
                         <div class="error__text">
                             Номер телефона не может содержать пробелов и букв
                         </div>
@@ -168,7 +195,7 @@
                     </div>
                 </div>
                 <div class="popup__bottom flex">
-                    <button class="popup__submit">
+                    <button class="popup__submit popup__submit-enter">
                         Войти
                     </button>
                 </div>
@@ -187,7 +214,7 @@
                             <div class="input__title">
                                 Введите ваш номер телефона. <br>Мы отправим на него код
                             </div>
-                            <input type="tel" name="phone" placeholder="В формате, +7 (999) 999-99-99" class="popup__input">
+                            <input type="tel" name="phone" placeholder="В формате, +79999999999" class="popup__input">
                             <div class="error__text startError">
                                 Номер телефона не может содержать пробелов и букв
                             </div>
@@ -197,7 +224,7 @@
                         <a href="#" class="back__popup">
                             Назад
                         </a>
-                        <button class="popup__submit forgetSubmit">
+                        <button class="popup__submit forgetSubmit sendCod">
                             Далее
                         </button>
                     </div>
@@ -214,7 +241,7 @@
                         <div class="text__bigger">Код из SMS</div>
                         <div class="label__popup flex">
                             <div class="input__title input__title-smoller">
-                                Мы отправили вам код подтверждения на номер <span class="telSpan"><span class="startTel">+7 (999)</span> xxx-xx-<span class="endTel">99</span></span>
+                                Мы отправили вам код подтверждения на номер <span class="telSpan"><span class="startTel">+7999</span>xxxxx<span class="endTel">99</span></span>
                             </div>
                             <input type="text" name="code" placeholder="Код" class="popup__input">
                             <div class="error__text">
@@ -225,7 +252,7 @@
                             Отправить код повторно
                         </a>
                         <div class="forget__tray">
-                            Попытка №<span class="trayNum">0</span>
+                            Попытка №<span class="trayNum">1</span>
                             <br>Запросить код повторно можно через <span class="countdown">60</span> секунд<br>
                             <div class="notSms">
                                 <span>Не приходит SMS</span>
@@ -317,7 +344,7 @@
                         <div class="input__title">
                             Введите ваш номер телефона. <br>Мы отправим на него код
                         </div>
-                        <input type="tel" name="login" placeholder="В формате, +7 (999) 999-99-99" class="popup__input">
+                        <input type="tel" name="login" placeholder="В формате, +79999999999" class="popup__input">
                         <div class="error__text startError">
                             Номер телефона не может содержать пробелов <br>и букв
                         </div>
@@ -342,7 +369,11 @@
                     </div>
                     <div class="label__popup errorInput agreeLabel flex">
                         <input type="checkbox" name="agreeReg" value="огласие на регистрацию" class="agreeInput">
-                        <div class="inputFalse">&#x2714;</div>
+                        <div class="inputFalse">
+                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 6L4 9L9.5 1" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <div class="agree__text">
                             Я соглашаюсь с <a href="#" target="_blank">Политикой конфиденциальности</a> и <a href="#" target="_blank">Правилами пользования сайтом</a>
                         </div>
@@ -352,7 +383,7 @@
                     </div>
                 </div>
                 <div class="popup__bottom flex">
-                    <button class="popup__submit reg__submit">
+                    <button class="popup__submit reg__submit sendCod">
                         Далее
                     </button>
                 </div>
@@ -371,7 +402,7 @@
                     <div class="text__bigger">Код из SMS</div>
                     <div class="label__popup flex">
                         <div class="input__title input__title-smoller">
-                            Мы отправили вам код подтверждения на номер <span class="telSpan"><span class="startTel">+7 (999)</span> xxx-xx-<span class="endTel">99</span></span>
+                            Мы отправили вам код подтверждения на номер <span class="telSpan"><span class="startTel">+7999</span>xxxxx<span class="endTel">99</span></span>
                         </div>
                         <input type="text" name="code" placeholder="Код" class="popup__input">
                         <div class="error__text">
@@ -382,7 +413,7 @@
                         Отправить код повторно
                     </a>
                     <div class="forget__tray">
-                        Попытка №<span class="trayNum">0</span>
+                        Попытка №<span class="trayNum">1</span>
                         <br>Запросить код повторно можно через <span class="countdown">60</span> секунд<br>
                         <div class="notSms">
                             <span>Не приходит SMS</span>
@@ -415,8 +446,41 @@
 
 
 
+
+
+
+
 <script src="js/vendor.min.js"></script>
 <script src="js/custom.min.js"></script>
+
+    <script>
+        $(".enter__container, .reg__container.lastStep").submit(function() {
+            var th = $(this);
+            $.ajax({
+                type: "POST",
+                url: "/mail.php",
+                data: th.serialize()
+            }).done(function() {
+                setTimeout(function(){
+
+                }, 100);
+            });
+            return false;
+        });
+
+
+        $('.popup__submit-reg, .popup__submit-enter').click(function (e) {
+            e.preventDefault();
+
+            $('.popup__container').hide();
+            $('.popup__end').css({'display' : 'flex'});
+            $('body, html').css({'overflow' : 'visible'});
+            $('html').css({'padding-right' : '0'});
+            $('.header__enter__container').addClass('logined');
+        })
+    </script>
+
+
 
     <script>
         $(".reg__container").submit(function() {
@@ -445,6 +509,14 @@
                 $('.forget__step').hide();
                 thisContainer.next().show();
             }
+
+            if($this.hasClass('sendCod')) {
+                var
+                    thisRep = $this.closest('.popup').find('.sendRepeat'),
+                    theCount = thisRep.next().find('.countdown');
+
+                countdown(60, theCount, thisRep);
+            }
         })
 
 
@@ -455,6 +527,7 @@
 
         $('body, html').css({'overflow' : 'hidden'});
         $('html').css({'padding-right' : scrollWidth+'px'});
+        $('html').css({'padding-right' : '0'})
         $('.header').css({'right' : scrollWidth+'px'});
     </script>
 
@@ -484,6 +557,14 @@
             if(!thisContainer.hasClass('lastStep')) {
                 $('.reg__container').hide();
                 thisContainer.next().show();
+            }
+
+            if($this.hasClass('sendCod')) {
+                var
+                    thisRep = $this.closest('.popup').find('.sendRepeat'),
+                    theCount = thisRep.next().find('.countdown');
+
+                countdown(60, theCount, thisRep);
             }
         })
     </script>

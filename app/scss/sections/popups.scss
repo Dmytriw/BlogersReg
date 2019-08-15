@@ -38,7 +38,6 @@
   box-shadow: 0 3px 10px rgba(0, 73, 129, 0.1);
   border-radius: 10px;
   padding-bottom: 30px;
-  width: 350px;
   z-index: 50;
   position: relative;
 }
@@ -114,7 +113,7 @@
 
 
 
-.popup__enter, .popup__reg {
+.popup__enter, .popup__reg, .popup__end {
   padding-top: 0;
   .popup {
     width: 430px;
@@ -292,7 +291,7 @@ button {
   line-height: 22px;
   color: #3897F0;
   margin-top: 10px;
-  display: inline-block;
+  display: none;
 }
 
 .forget__tray {
@@ -300,7 +299,7 @@ button {
   line-height: 14px;
   margin-top: 10px;
   color: #6A7B83;
-  display: none;
+  display: block;
 }
 
 .notSms {
@@ -376,6 +375,11 @@ button {
   &.checked {
     .inputFalse {
       color: #192229;
+      background-color: #3897F0;
+      border: 1px solid #3897F0;
+      svg {
+        opacity: 1;
+      }
     }
   }
 }
@@ -397,7 +401,7 @@ button {
     height: 12px;
   }
   svg {
-    height: 12px;
+    opacity: 0;
   }
 }
 
@@ -449,13 +453,61 @@ button {
 }
 
 
+.end__container {
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+.done__text {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.done_button {
+  height: 36px;
+  background: #FFFFFF;
+  border: 1px solid #D5DFE4;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #192229;
+  text-align: center;
+  line-height: 34px;
+  font-size: 14px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: auto;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.window__container {
+  position: static;
+  justify-content: center;
+  display: none;
+  padding-top: 30px;
+  z-index: 1;
+
+  .popup {
+    z-index: 1;
+  }
+}
+
+
 
 
 
 
 
 @media screen and (max-width: 500px) {
-  .popup__enter, .popup__reg {
+  .popup__enter, .popup__reg, .popup__end {
     .popup {
       width: calc(100% - 35px);
     }
