@@ -308,6 +308,32 @@
   .header__enter__container {
     margin-right: 20px;
   }
+
+  .logined__link {
+    .head__select__container {
+      display: none !important;
+    }
+  }
+
+  .header__nav__container  {
+    .head_nav_select {
+      display: none !important;
+    }
+    .head__select__container {
+      display: block !important;
+      padding: 0 !important;
+
+      a {
+        color: #6A7B83;
+        font-size: 16px;
+        padding-left: 0;
+        line-height: inherit;
+        height: auto;
+        margin-bottom: 20px;
+        background-color: #fff !important;
+      }
+    }
+  }
 }
 
 

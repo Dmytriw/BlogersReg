@@ -113,7 +113,7 @@
 
 
 
-.popup__enter, .popup__reg, .popup__end {
+.popup__enter, .popup__reg, .popup__end, .popup__save {
   padding-top: 0;
   .popup {
     width: 430px;
@@ -507,7 +507,7 @@ button {
 
 
 @media screen and (max-width: 500px) {
-  .popup__enter, .popup__reg, .popup__end {
+  .popup__enter, .popup__reg, .popup__end, .popup__save {
     .popup {
       width: calc(100% - 35px);
     }

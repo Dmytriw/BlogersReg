@@ -178,7 +178,7 @@
                         <div class="input__title">
                             Введите номер телефона
                         </div>
-                        <input type="tel" name="login" placeholder="В формате, +79999999999" class="popup__input">
+                        <input type="tel" name="login" onkeypress='return isNumberKey(event);' placeholder="В формате, +79999999999" class="popup__input">
                         <div class="error__text">
                             Номер телефона не может содержать пробелов и букв
                         </div>
@@ -210,11 +210,11 @@
                         <div class="popup__step">
                             Шаг 1 из 3
                         </div>
-                        <div class="label__popup errorInput flex">
+                        <div class="label__popup flex">
                             <div class="input__title">
                                 Введите ваш номер телефона. <br>Мы отправим на него код
                             </div>
-                            <input type="tel" name="phone" placeholder="В формате, +79999999999" class="popup__input">
+                            <input type="tel" onkeypress='return isNumberKey(event);' name="phone" placeholder="В формате, +79999999999" class="popup__input">
                             <div class="error__text startError">
                                 Номер телефона не может содержать пробелов и букв
                             </div>
@@ -243,7 +243,7 @@
                             <div class="input__title input__title-smoller">
                                 Мы отправили вам код подтверждения на номер <span class="telSpan"><span class="startTel">+7999</span>xxxxx<span class="endTel">99</span></span>
                             </div>
-                            <input type="text" name="code" placeholder="Код" class="popup__input">
+                            <input type="text" name="code" placeholder="Введите код" class="popup__input">
                             <div class="error__text">
                                 Код неверный
                             </div>
@@ -305,7 +305,7 @@
                         <a href="#" class="back__popup">
                             Назад
                         </a>
-                        <button class="popup__submit forgetSubmit">
+                        <button class="popup__submit forgetSubmit forgetSubmitLast">
                             Далее
                         </button>
                     </div>
@@ -318,6 +318,29 @@
 </div>
 
 
+<div id="savedPass" style="display: none;" class="popup__container popup__save">
+    <div class="popup__inner">
+        <div class="popups__overlay"></div>
+        <div class="popup">
+            <a href="#" class="popup__close_reg">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.5" d="M1 1L11 11M11 1L1 11" stroke="#6A7B83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <div class="__container">
+                <div class="end__container flex">
+                    <img src="/img/icons/done_icon.png" alt="">
+                    <div class="done__text">
+                        Ваш пароль<br>сохранен
+                    </div>
+                    <a href="#" class="done_button ppupCloseButton">
+                        Готово
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -344,7 +367,7 @@
                         <div class="input__title">
                             Введите ваш номер телефона. <br>Мы отправим на него код
                         </div>
-                        <input type="tel" name="login" placeholder="В формате, +79999999999" class="popup__input">
+                        <input type="tel" onkeypress='return isNumberKey(event);' name="login" placeholder="В формате, +79999999999" class="popup__input">
                         <div class="error__text startError">
                             Номер телефона не может содержать пробелов <br>и букв
                         </div>
@@ -367,7 +390,7 @@
                             Пароли не совпадают
                         </div>
                     </div>
-                    <div class="label__popup errorInput agreeLabel flex">
+                    <div class="label__popup agreeLabel flex">
                         <input type="checkbox" name="agreeReg" value="огласие на регистрацию" class="agreeInput">
                         <div class="inputFalse">
                             <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -404,7 +427,7 @@
                         <div class="input__title input__title-smoller">
                             Мы отправили вам код подтверждения на номер <span class="telSpan"><span class="startTel">+7999</span>xxxxx<span class="endTel">99</span></span>
                         </div>
-                        <input type="text" name="code" placeholder="Код" class="popup__input">
+                        <input type="text" name="code" placeholder="Введите код" class="popup__input">
                         <div class="error__text">
                             Код неверный
                         </div>
@@ -473,10 +496,18 @@
             e.preventDefault();
 
             $('.popup__container').hide();
-            $('.popup__end').css({'display' : 'flex'});
+            $('.popup__save').css({'display' : 'flex'});
             $('body, html').css({'overflow' : 'visible'});
             $('html').css({'padding-right' : '0'});
             $('.header__enter__container').addClass('logined');
+        });
+
+
+        $('.forgetSubmitLast').click(function (e) {
+            e.preventDefault();
+
+            $('.popup__container').hide();
+            $('.popup__save').show();
         })
     </script>
 
@@ -567,6 +598,20 @@
                 countdown(60, theCount, thisRep);
             }
         })
+    </script>
+
+
+
+    <script>
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            console.log(charCode);
+            if (charCode != 43 &&  charCode > 31
+                && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
     </script>
 
 

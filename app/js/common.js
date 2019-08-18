@@ -8,7 +8,7 @@ $(function () {
         return false;
     });
 
-    $("input[type='tel']").mask("+79999999999");
+    // $("input[type='tel']").mask("+79999999999");
 
     $('input').focus(function () {
        $(this).closest('.label__popup').removeClass('errorInput');
@@ -200,6 +200,7 @@ function navigation() {
         $(window).scrollTop(windowTop);
 
     });
+
 }
 
 
@@ -226,7 +227,7 @@ function countdown(start, count, button) {
 
 //Попапи
 function closingPopups() {
-    $('.popup__close_reg, .popups__overlay').click(function (e) {
+    $('.popup__close_reg, .popups__overlay, .ppupCloseButton').click(function (e) {
         e.preventDefault();
 
         $('.popup__container').hide();
@@ -235,3 +236,7 @@ function closingPopups() {
         $('.header').css({'right' : '0'});
     });
 }
+
+
+
+
