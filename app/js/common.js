@@ -8,6 +8,12 @@ $(function () {
         return false;
     });
 
+    $('.header__nav__container, .nav__overlay').on('scroll touchmove mousewheel', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    });
+
     // $("input[type='tel']").mask("+79999999999");
 
     $('input').focus(function () {
@@ -176,28 +182,16 @@ function navigation() {
     $('.hamburger__button').click(function (e) {
         e.preventDefault();
 
-        var windowTop = $(window).scrollTop();
-
         setTimeout(function () {
-            $('body').attr('data-top', windowTop);
             $('.header__nav__container').addClass('openedNav');
-            $('html, body').css({'overflow' : 'hidden', 'position' : 'fixed'});
 
-            var windowTopData = $('body').attr('data-top');
-
-            $('body').scrollTop(windowTopData);
         }, 50);
     });
 
     $('.vav__close, .nav__overlay').click(function (e) {
         e.preventDefault();
 
-        var windowTop = $('body').attr('data-top');
-
         $('.header__nav__container').removeClass('openedNav');
-        $('html, body').css({'overflow' : 'visible', 'position' : 'relative'});
-
-        $(window).scrollTop(windowTop);
 
     });
 
