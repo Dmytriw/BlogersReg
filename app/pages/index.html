@@ -103,6 +103,26 @@
     </div>
 
 
+    <div id="savedPass" style="display: none;" class="window__container popup__save">
+        <div class="popup__inner">
+            <div class="popup">
+                <div class="__container">
+                    <div class="end__container flex">
+                        <img src="/img/icons/done_icon.png" alt="">
+                        <div class="done__text">
+                            Ваш пароль<br>сохранен
+                        </div>
+                        <a href="#" class="done_button ppupCloseButton">
+                            Готово
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 </div>
 
 
@@ -318,29 +338,6 @@
 </div>
 
 
-<div id="savedPass" style="display: none;" class="popup__container popup__save">
-    <div class="popup__inner">
-        <div class="popups__overlay"></div>
-        <div class="popup">
-            <a href="#" class="popup__close_reg">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.5" d="M1 1L11 11M11 1L1 11" stroke="#6A7B83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-            <div class="__container">
-                <div class="end__container flex">
-                    <img src="/img/icons/done_icon.png" alt="">
-                    <div class="done__text">
-                        Ваш пароль<br>сохранен
-                    </div>
-                    <a href="#" class="done_button ppupCloseButton">
-                        Готово
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 
@@ -495,8 +492,9 @@
         $('.popup__submit-reg, .popup__submit-enter').click(function (e) {
             e.preventDefault();
 
+            $('.window__container').hide();
             $('.popup__container').hide();
-            $('.popup__save').css({'display' : 'flex'});
+            $('.popup__end').css({'display' : 'flex'});
             $('body, html').css({'overflow' : 'visible'});
             $('html').css({'padding-right' : '0'});
             $('.header__enter__container').addClass('logined');
@@ -506,6 +504,7 @@
         $('.forgetSubmitLast').click(function (e) {
             e.preventDefault();
 
+            $('.window__container').hide();
             $('.popup__container').hide();
             $('.popup__save').show();
         })

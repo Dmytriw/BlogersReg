@@ -227,7 +227,7 @@ function countdown(start, count, button) {
 
 //Попапи
 function closingPopups() {
-    $('.popup__close_reg, .popups__overlay, .ppupCloseButton').click(function (e) {
+    $('.popup__close_reg, .popups__overlay').click(function (e) {
         e.preventDefault();
 
         $('.popup__container').hide();
